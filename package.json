@@ -12,5 +12,10 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
+  }
 }
