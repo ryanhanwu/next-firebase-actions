@@ -1,13 +1,19 @@
 {
   "name": "next-firebase-actions",
   "version": "0.1.0",
+  "main": "src/firebaseApp.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "clean": "rimraf out && rimraf build",
+    "build": "next build && next export",
+    "deploy": "firebase deploy --only functions,hosting",
     "start": "next start"
   },
   "dependencies": {
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.13.1",
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -16,6 +22,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.3",
     "postcss": "^8.2.4",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^2.0.2"
   }
 }
